@@ -8,12 +8,10 @@
 #include "Widgets/Input/SMultiLineEditableTextBox.h"
 #include "Widgets/Input/SEditableTextBox.h"
 
-
 void SK2PostItTitleTextBlock::Construct( const FArguments& InArgs )
 {
 	check(InArgs._Style);
-
-	OnBeginTextEditDelegate = InArgs._OnBeginTextEdit;
+	
 	OnTextCommittedDelegate = InArgs._OnTextCommitted;
 	IsSelected = InArgs._IsSelected;
 	OnVerifyTextChanged= InArgs._OnVerifyTextChanged;
@@ -58,6 +56,7 @@ void SK2PostItTitleTextBlock::Construct( const FArguments& InArgs )
 			.Style(&InArgs._Style->EditableTextBoxStyle)
 			.Font(InArgs._Font)
 			.ToolTipText(InArgs._ToolTipText)
+			.OnBeginTextEdit(InArgs._OnBeginTextEdit)
 			.OnTextChanged(this, &SK2PostItTitleTextBlock::OnTextChanged)
 			.OnTextCommitted(this, &SK2PostItTitleTextBlock::OnTextBoxCommitted)
 			.WrapTextAt(InArgs._WrapTextAt)
@@ -77,6 +76,7 @@ void SK2PostItTitleTextBlock::Construct( const FArguments& InArgs )
 			.Style(&InArgs._Style->EditableTextBoxStyle)
 			.Font(InArgs._Font)
 			.ToolTipText(InArgs._ToolTipText)
+			.OnBeginTextEdit(InArgs._OnBeginTextEdit)
 			.OnTextChanged(this, &SK2PostItTitleTextBlock::OnTextChanged)
 			.OnTextCommitted(this, &SK2PostItTitleTextBlock::OnTextBoxCommitted)
 			.SelectAllTextWhenFocused(true)
