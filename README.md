@@ -1,4 +1,4 @@
-# K2PostIt (UE5.4 to UE5.6)
+# K2PostIt (UE5.4 to UE5.7)
 
 This is a fairly small plugin which is intended to look down upon Unreal's very annoying "Comment" node. Don't get me wrong, the "Comment" node is great for wrapping/labelling blocks of blueprint graph, but it's hardly a comment node!
 
